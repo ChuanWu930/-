@@ -1,0 +1,276 @@
+<html>
+    <head><title>明新科技大學資訊管理系</title> <!-- 頁面標題 -->
+    <meta charset="utf-8"> <!-- 設定網頁編碼為 UTF-8 -->
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet"> <!-- 引入 FlexSlider 的 CSS 檔案 -->
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script> <!-- 引入 jQuery 库 -->
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script> <!-- 引入 FlexSlider 的 JavaScript 檔案 -->
+    <script>
+        $(window).load(function() { <!-- 等待整個網頁載入完成後執行 -->
+            $('.flexslider').flexslider({ <!-- 初始化 FlexSlider -->
+                animation: "slide", <!-- 設定動畫效果為滑動 -->
+                rtl: true <!-- 設定為從右向左顯示（右至左文字方向） -->
+            });
+        });               <!-- jQuery Script 結束 -->
+    </script>        
+</head>
+    </script> <!-- 結束 <script> 標籤 -->
+    <style>
+        *{
+            margin:0; /* 設定所有元素的邊距為 0 */
+            color:gray; /* 設定文字顏色為灰色 */
+            text-align:center; /* 設定文字置中對齊 */
+        }
+        /* top */
+        .top{
+             background-color: white; /* 設定背景顏色為白色 */
+        }
+        .top .container{
+            display: flex; /* 使用 flexbox 佈局 */
+            align-items: center; /* 將子元素垂直居中對齊 */
+            justify-content: space-between; /* 將子元素水平分散對齊 */
+            padding:10px; /* 設定內邊距為 10 像素 */
+        }
+        .top .logo{
+            /*border:1px solid red;*/
+            font-size: 35px; /* 設定字體大小為 35 像素 */
+            font-weight: bold; /* 設定字體粗細為粗體 */
+        }
+        .top .logo img{
+            width: 100px; /* 設定圖片寬度為 100 像素 */
+            vertical-align: middle; /* 設定垂直對齊方式為中間對齊 */
+        }
+        .top .top-nav{
+            /*border:1px solid red;*/
+            font-size: 25px; /* 設定字體大小為 25 像素 */
+            font-weight: bold; /* 設定字體粗細為粗體 */      
+        }
+        .top .top-nav a{
+            text-decoration: none; /* 取消連結下劃線 */
+        }
+        /* nav */
+        .nav {
+            background-color:#333; /* 設定背景顏色為深灰色 */
+            display: flex; /* 使用 flexbox 佈局 */
+            justify-content: center; /* 將子元素水平居中對齊 */
+        }
+        .nav ul {
+            list-style-type: none; /* 移除列表樣式 */ 
+            margin: 0; /* 設定外邊距為 0 */
+            padding: 0; /* 設定內邊距為 0 */
+            overflow: hidden; /* 超出部分隱藏 */
+            background-color: #333; /* 設定背景顏色為深灰色 */
+        }
+        .nav li {
+            float: left; /* 左浮動 */
+        }
+        .nav li a {    
+            display: block; /* 使超連結顯示為區塊 */
+            color: white; /* 設定文字顏色為白色 */
+            text-align: center; /* 設定文字置中對齊 */
+            padding: 14px 16px; /* 設定內邊距為 14px 上下，16px 左右 */
+            text-decoration: none; /* 取消連結下劃線 */
+        }
+        .nav li a:hover {
+            background-color: #111; /* 滑鼠懸停時設定背景顏色為深灰色 */
+        }
+        /*下拉式選單*/
+        .dropdown:hover .dropdown-content {
+            display: block;   /* 滑鼠懸停時顯示下拉內容 */
+        }
+        li.dropdown:hover{
+            background-color: #333;  /* 滑鼠懸停時設定背景顏色為深灰色 */
+        }
+        .dropdown-content {  /* 設定下拉選單內容格式 */
+            display: none; /* 隱藏下拉內容 */
+            position: absolute; /* 設定絕對定位 */
+            background-color: #333; /* 設定背景顏色為深灰色 */
+            min-width: 160px; /* 設定最小寬度為 160px */
+            z-index: 1; /* 設定堆疊順序為 1 */
+        }
+        .dropdown-content a { /* 設定下拉選單連結內容格式 */
+            color: black; /* 設定文字顏色為黑色 */
+            padding: 12px 16px; /* 設定內邊距為 12px 上下，16px 左右 */
+            text-decoration: none; /* 取消連結下劃線 */
+            display: block; /* 使超連結顯示為區塊 */
+            text-align: left; /* 設定文字左對齊 */
+        }
+        /* slider */
+        .slider{
+            background-color: black; /* 設定背景顏色為黑色 */
+        }
+        /* banner*/
+        .banner{
+            background-image: linear-gradient(#ABDCFF,#0396FF); /* 設定漸層背景色 */
+            padding:30px; /* 設定內邊距為 30px */
+        }
+        .banner h1{
+            padding: 20px; /* 設定內邊距為 20px */
+        }        
+        /*faculty*/
+        .faculty {
+            display: block; /* 設定為區塊元素 */
+            justify-content: center; /* 水平居中對齊 */
+            background-color:white; /* 設定背景顏色為白色 */
+            padding:40px; /* 設定內邊距為 40px */
+        }
+        .faculty h2 {
+            font-size: 25px; /* 設定字體大小為 25px */
+            color: rgb(50,51,52); /* 設定文字顏色 */
+            padding-bottom:40px; /* 設定底部填充為 40px */
+        }
+        .faculty .container {
+            /*border:1px solid red;*/
+            display: flex; /* 使用 flexbox 佈局 */
+            justify-content: space-around; /* 元素之間的空間分配相等 */
+            align-items: center; /* 垂直居中對齊 */
+        }
+        .faculty .teacher{
+            /*border:1px solid blue;*/
+            display:block; /* 設定為區塊元素 */
+            text-decoration: none; /* 取消連結下劃線 */
+        }
+        .faculty .teacher img{
+            height: 200px; /* 設定圖片高度為 200px */
+            width: 200px; /* 設定圖片寬度為 200px */
+        }
+        .faculty .teacher h3{
+            color: White; /* 設定文字顏色為白色 */
+            background-color: rgba(39,40,34,.500); /* 設定背景色 */
+            text-align: center; /* 文字置中對齊 */          
+        }
+        /*contact*/
+        .contact {
+            display: block; /* 設定為區塊元素 */
+            justify-content: center; /* 水平居中對齊 */
+            margin-top: 30px; /* 設定上方外邊距為 30px */
+            margin-bottom: 30px; /* 設定下方外邊距為 30px */                
+        }
+        .contact h2{
+            color: rgb(54, 82, 110); /* 設定文字顏色 */
+            font-size: 25px; /* 設定字體大小為 25px */
+        }
+        .contact .infos{
+            display:flex; /* 使用 flexbox 佈局 */
+            margin-top: 30px;  /* 設定上方外邊距為 30px */
+            justify-content: center; /* 水平居中對齊 */
+        }
+        .contact .infos .left{
+            display:block; /* 設定為區塊元素 */
+            text-align: left; /* 文字左對齊 */
+            margin-right: 30px; /* 設定右邊外邊距為 30px */
+        }
+              .contact .infos .left b{
+            display:block; /* 設定為區塊元素 */
+            text-align: left; /* 文字左對齊 */
+            margin-top: 10px; /* 設定上方外邊距為 10px */
+            text-decoration: bold; /* 設定文字加粗 */
+            color: Gray; /* 設定文字顏色為灰色 */
+            font-size: 18px; /* 設定字體大小為 18px */
+            line-height: 18px; /* 設定行高為 18px */
+        }
+        .contact .infos .left span{
+            display:block; /* 設定為區塊元素 */
+            text-align: left; /* 文字左對齊 */
+            margin-top: 10px; /* 設定上方外邊距為 10px */
+            color: rgba(39,40,34,0.5); /* 設定文字顏色 */
+            font-size: 16px; /* 設定字體大小為 16px */
+            padding-left: 27px; /* 設定左內邊距為 27px */
+        }
+        .contact .infos .right{
+            height: 200px; /* 設定高度為 200px */              
+        }
+        .contact .infos .right iframe{
+            width: 100%; /* 設定寬度為 100% */
+            height: 100%; /* 設定高度為 100% */
+            border: 1px solid rgba(39,40,34,0.50); /* 設定邊框 */
+        }
+        /*footer*/
+        .footer{
+            display: flex; /* 使用 flexbox 佈局 */
+            justify-content: center; /* 水平居中對齊 */
+            background-color: rgb(25,26,30); /* 設定背景顏色 */
+            padding: 30px 0; /* 設定上下內邊距為 30px，左右為 0 */
+        }
+  </head>
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                  <img src="https://github.com/shhuangmust/html/raw/111-1/IMMUST_LOGO.JPG">
+                  明新科技大學資訊管理系
+                </div>
+                <div class="top-nav">
+                  <a href="#">明新科大</a> <!-- 補充 href 屬性值 -->
+                  <a href="#">明新管理學院</a> <!-- 補充 href 屬性值 -->
+                  <a href="login.html">登入</a> <!-- 補充 href 屬性值 -->
+                </div>
+              </div>
+        </div>
+        <div class="nav">   
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#introduction">系所簡介</a></li>
+                <li  class="dropdown"><a href="#faculty">成員簡介</a>
+                    <div class="dropdown-content">
+                        <a href="#faculty">黃老師</a>
+                        <a href="#faculty">李老師</a>
+                        <a href="#faculty">應老師</a>
+                    </div>                       
+                </li>
+                <li><a href="#about">相關資訊</a></li>
+            </ul>
+        </div>
+          <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider1.JPG" /></li> <!-- 第一張幻燈片的圖片 -->
+                    <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider2.JPG" /></li> <!-- 第二張幻燈片的圖片 -->
+                    <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider3.JPG" /></li> <!-- 第三張幻燈片的圖片 -->
+                </ul>
+            </div>
+        </div>
+        <div class="banner" id="introduction">
+            <h1>系所簡介</h1> <!-- 顯示系所簡介 -->
+            <h1>歷年教育部評鑑皆榮獲一等</h1> <!-- 顯示歷年教育部評鑑皆榮獲一等 -->
+            <h1>明新科技大學資訊管理系</h1> <!-- 顯示明新科技大學資訊管理系 -->
+            <h1>全國私立科大第一資管系</h1> <!-- 顯示全國私立科大第一資管系 -->
+        </div>
+        <div class="faculty" id="faculty">
+            <h2>師資介紹</h2> <!-- 顯示師資介紹 -->
+            <div class="container">
+                <a class="teacher" href="">
+                    <img src="https://github.com/shhuangmust/html/raw/111-1/faculty1.jpg" /> <!-- 黃老師的照片 -->
+                    <h3>黃老師</h3> <!-- 顯示黃老師 -->
+                </a>
+                <a class="teacher" href="">
+                    <img src="https://github.com/shhuangmust/html/raw/111-1/faculty2.jpg" /> <!-- 李老師的照片 -->
+                    <h3>李老師</h3> <!-- 顯示李老師 -->
+                </a>
+                <a class="teacher" href="">
+                    <img src="https://github.com/shhuangmust/html/raw/111-1/faculty3.jpg" /> <!-- 應老師的照片 -->
+                    <h3>應老師</h3> <!-- 顯示應老師 -->
+                </a>        
+            </div>
+        </div>
+        <div class="contact" id="about">
+                <h2>相關資訊</h2> <!-- 顯示相關資訊 -->
+                <div class="infos">
+                    <div class="left">
+                        <b>明新科技大學管理學院大樓二樓</b> <!-- 顯示地址 -->
+                        <span>304新竹縣新豐鄉新興路1號</span> <!-- 顯示地址 -->
+                        <b> 電話:03-5593142</b> <!-- 顯示電話號碼 -->
+                        <span>分機:3431、3432、3433</span> <!-- 顯示分機號碼 -->
+                        <b> 傳真:03-5593142</b> <!-- 顯示傳真號碼 -->
+                        <span>分機:3440</span> <!-- 顯示分機號碼 -->
+                    </div>
+                    <div class="right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.185885150929!2d120.98912333466727!3d24.86332844316392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683154faa8283b%3A0x92cb1c5564a574ef!2z5piO5paw56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1536665837954" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+        </div>
+        <div class="footer">
+            &copy;Copyright 2022 Department of Information Management, MUST. All rights reserved. 
+            維護者 Tony SHHuang
+        </div>
+     </body>
+</html>
